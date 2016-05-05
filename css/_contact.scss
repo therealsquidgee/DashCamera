@@ -1,0 +1,56 @@
+
+@import 'colors';
+
+#contact-slide {
+    
+    height: auto;
+    
+    h4 {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    form {
+        
+        height: 100%;
+       // background-color: $white;
+        width: auto;
+        margin: 30px;
+        padding: 30px;
+    }
+    
+    #details {
+
+        height: 100%;
+        background-image: url("../images/maps.png");
+        background-size: cover;
+        background-position: 50% 50%;
+       // -webkit-filter: grayscale(0.9);
+        //filter: grayscale(0.9);
+        overflow: hidden;
+        
+        #details-info {
+            background-color: $white;
+            position: relative;
+        
+            width: auto;
+            max-width: 300px;
+            padding: 30px 40px 30px 10px;
+            margin: 30px;
+        }
+     
+        li {
+            list-style-type: none;
+            padding: 10px;
+            
+            .glyphicon {
+                padding-right: 20px;
+            }
+        }
+        
+       
+    }
+}
+
+
+

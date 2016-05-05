@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Dash Camera</title>
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700Karla:400,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- Custom styles for this template -->
+    
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+      
+    <script src="js/vue.js"></script>
+  </head>
+
+  <body>
+    
+      <!-- THE NAV BAR -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="nav navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#home">Logo <span class="glyphicon glyphicon-home"></span></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Features
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#record">Auto Record</a></li>
+                        <li><a href="#detect">Accident Detection</a></li>
+                        <li><a href="#forget">Set and Forget</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact-slide">Contact</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+    <!-- THE MAIN CONTAINER THE HOLDS ALL THE SLIDES -->   
+    <div class="container-fluid">
+        
+        <!-- THE MAIN LANDING SLIDE -->
+        <div id="home" class="row main main-light background">
+            
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+                
+                <h2 class="main-heading"><span>DASH CAMERA.</span> A MOBILE DASH CAMERA FOR THE EVERYDAY DRIVER.</h2>
+                
+                <h3>x x x</h3>
+              
+                <p class="main-text">The goal of Dash Camera is to provide the world with a <strong>FREE</strong> alternative to expensive dash cameras. With Dash Camera you can drive easy knowing if anything goes wrong you will have a second pair of eyes to shed some light of the situation.</p>
+                
+                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s">  
+                    <div class="play-button center"></div>
+                    <p class="main-play"><span>PLAY VIDEO</span></p>
+                </a>
+                
+            </div>
+            
+        </div>
+        
+        <!-- Pop up modal that plays video -->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                        <div>
+                            <iframe width="600" height="350"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <!-- FEATURES SLIDE -->
+      <div class="row marketing">
+       
+          <!-- Feature 1: the record functionality -->
+        <div id="record" class="feature col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Auto Record</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-orange" href="#" role="button">View details &raquo;</a></p>
+        </div>
+          
+          <!-- Feature 2: The automatic detection functionality -->
+        <div id="detect" class=" col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 feature">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Accident Detection</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-orange" href="#" role="button">View details &raquo;</a></p>
+        </div>
+          
+          <!-- Feature 3: The background useability of the app -->
+        <div id="forget" class="feature col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Set and Forget</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-orange" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+        
+      <!-- MAIN SELLING POINT/FEATURE SLIDE -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">How it works. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="images/placeholder.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+        
+        <!-- THE COMING SOON SLIDE -->
+        <div class="row coming" id="signup">
+            <div id="mainContent" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+                <h1 id="counterHeading">Coming Soon In..</h1>
+                <!-- The timer/counter feature -->
+                <div id="counter">
+                    <span id="months" class="timerObject">00</span>
+                    <span id="days" class="timerObject">00</span>
+                    <span id="hours" class="timerObject">00</span>
+                    <span id="minutes" class="timerObject">00</span>
+                    <span id="seconds" class="timerObject">00</span>      
+                </div>
+                
+                <p>Like us on facebook! "insert facebook like icon</p>
+                <p>For every like our facebook page gets the counter will decrease by 1 hour</p>
+                
+                <hr class="featurette-divider">
+                
+                <p>Sign up now and be guaranteed a FREE version of the app upon its release</p>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="add your email" class="form-control">
+                </div>
+                
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Notify Me</a></p>
+            </div>
+        </div>
+        
+        <!-- THE REVIEWS SLIDE -->
+        <div id="reviews" class="row">      
+            <div class="text-center">  
+                <h1>Reviews</h1>
+                    <blockquote>
+                        {{ review }}
+                        <cite>The reviewer's name..</cite>
+                    </blockquote>
+                
+                    <!-- this is a feature that has been worked on but removed until it can be implemented without further errors
+
+                    <div class="text-center inline pad-tp">
+                    
+                    	<ul>
+	                        <li v-for="review in reviews">     
+	                            <a @click="selectReview($index, false)">
+	                                <img v-show="review.selected == true" src="images/{{ review.image }}" alt="Picture of reviewer">
+	                                <img v-show="review.selected == false" src="images/person_blank.png" alt="Picture of reviewer">
+	                            </a>
+	                        </li>
+	                    </ul>
+						
+                    </div>     -->         
+            </div>
+        </div>
+       
+        <!-- THE CONTACT SLIDE -->
+        <div id="contact-slide" class="row row-minus-pad">
+        
+            <div id="form" class="col-lg-6 col-md-6 col-sm-12">
+                          
+                <form method="post" action="contact.php" id="contact-form">
+                    <h4>Get in touch</h4> 
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <br>
+                    <textarea id="message" name="message" placeholder="message"></textarea>
+                    <br>
+                    <input type="submit" class="btn btn-default" name="contact_submit" value="Send Message">
+                    
+                </form> 
+            </div> 
+            
+            
+            <div id="details" class="col-lg-6 col-md-6 col-sm-12">
+                <div id="details-info">
+                	<h4>CONTACT DETAILS</h4>
+                    <ul>   
+                        <li><span class="glyphicon glyphicon-user"></span>David Chaseling</li>
+                        <li><span class="glyphicon glyphicon-map-marker"></span>66 Durham St, St Lucia, Brisbane</li>
+                        <li><span class="glyphicon glyphicon-earphone"></span>0403836118</li>
+                        <li><span class="glyphicon glyphicon-envelope"></span>davidchaseling@live.com.au</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        
+        <!-- THE SOCIAL MEDIA LINKS SLIDE -->      
+        <div class="row icons text-center">
+        
+            <div class="text-center icons inline">
+            	<ul>
+	                <li><a href="https://www.facebook.com"><img src="images/facebook_icon3.png" alt="facebook link"></a></li>
+	                <li><a href="https://www.facebook.com"><img src="images/mail_icon3.png" alt="facebook link"></a></li>
+	                <li><a href="https://www.facebook.com"><img src="images/twitter_icon3.png" alt="facebook link"></a></li>
+	                <li><a href="https://www.facebook.com"><img src="images/google_icon3.png" alt="facebook link"></a></li>
+            	</ul>
+            
+            </div>
+        </div>
+        
+
+      <!-- THE FOOTER -->
+      <footer class="row text-center">
+        <p>Copyright &copy; 2016 Dash Cam App, Inc.</p>
+      </footer> 
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+      
+    <!-- jQuery auto-hide nav bar plugin -->
+    <script src="js/jquery.bootstrap-autohidingnavbar.js"></script>
+    <script>
+      $("nav.navbar-fixed-top").autoHidingNavbar();
+    </script>
+    <script src="js/main.js"></script>
+      
+    <!-- CountDown and Count Up timer -->   
+    <script src="js/countdown.js"></script>
+    <script>
+        countDown('04/28/2016 12:55:00 PM', ['months', 'days', 'hours', 'minutes', 'seconds'], 'counterHeading');
+    </script>
+    <script src="js/vueReviews.js"></script>
+    <!-- Video player Plugin -->
+    <script src="js/video.js"></script>
+      
+    
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+      
+    <!-- Review Changer -->
+    <script src="js/reviews.js"></script>
+      
+  </body>
+</html>

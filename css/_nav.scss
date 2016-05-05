@@ -1,0 +1,31 @@
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar {
+    background-color: rgba(0, 0,0, 0);
+    border-radius: 0;
+    a  {
+        color: black;
+    }
+   border-color: rgba(0, 0,0, 0);
+
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        li {
+            background-color: white;
+        }
+    }
+    
+}
