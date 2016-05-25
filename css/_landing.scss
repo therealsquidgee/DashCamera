@@ -2,12 +2,19 @@
 ----------------------------------------------------*/
 
 .main {
-    //padding: 200px 0px 140px 0px;
     min-height: 400px;
     background-color: #D8E8ED;
     background-image: url("../images/bg2.jpg");
     background-size: cover;
     background-position: 50% 50%;
+   
+    a{
+        text-decoration: none;
+        p{
+            color: #E09F43;
+        }
+        
+    }
 }
 
 #mainContent {
@@ -25,10 +32,7 @@
     p {
         color: #7A7A7A;
     }
-    span {
-        //font-weight: bold;
-        color: #E09F43;
-    }
+    
 }
 
 
@@ -39,10 +43,7 @@
     h1, h2, a, p {
         color: white;
     }
-    span {
-        //font-weight: bold;
-        color: #E09F43;
-    }
+
     p {
         color: #E8E8E8;
     }
@@ -79,9 +80,10 @@
 }
 
 .play-button:hover {
-    background-color: black;
-    
-    color: blue;
+    //background-color: white;
+    background-color: white;
+   // border-color: black;
+   
 }
 
 .play-button:after {
@@ -93,6 +95,6 @@
     margin: 0 auto;
     border-style: solid;
     border-width: 15px 0 15px 23px;
-    border-color: transparent transparent transparent #E09F43;//#D3E043;
+    border-color: transparent transparent transparent #E09F43;
 }
 

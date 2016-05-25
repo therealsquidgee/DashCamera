@@ -4294,6 +4294,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-left: -15px;
   }
 }
+
+/*
 .navbar-toggle {
   position: relative;
   float: right;
@@ -4322,7 +4324,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-toggle {
     display: none;
   }
-}
+} */
 .navbar-nav {
   margin: 7.5px -15px;
 }

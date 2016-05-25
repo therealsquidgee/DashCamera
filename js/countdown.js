@@ -44,13 +44,14 @@ var countDown = function(endDate, elements, heading){
                         'minutes': Math.floor((remaining % _hour) / _minute),
                         'seconds': Math.floor((remaining % _minute) / _second)
                     }
-                     
+                   
                     updateCounter(elements, data);
 
-                   // console.log(data);
+                    
                 }
         
         };
+    
     
         // Changes the title above the counter  
         changeTitle = function(){
@@ -63,7 +64,8 @@ var countDown = function(endDate, elements, heading){
         }
         
         
-        calculate();  
+        calculate(); 
+    
 }
 
 var updateCounter = function(elements, data){
@@ -71,7 +73,11 @@ var updateCounter = function(elements, data){
         for(x in elements){
             var x = elements[x];
             data[x] = (('00' + data[x]).slice(-2));
+            
+                  
             document.getElementById(x).innerHTML = data[x];
+            
+            
         }
     }
 }
@@ -92,7 +98,7 @@ var countUp = function(){
             
         }
         totalTime ++;
-        console.log("counting up, total time: " + totalTime + " timer: " + timer);
+       // console.log("counting up, total time: " + totalTime + " timer: " + timer);
     }
     
     //Add to counter 

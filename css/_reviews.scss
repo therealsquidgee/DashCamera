@@ -1,50 +1,55 @@
 #reviews {
     background-color: white;
 
+
     a {
         text-decoration: none;
     }
     blockquote {
         max-width: 600px;
-        min-height: 250px;
+        min-height: 200px;
         margin: 0 auto;
-        padding: 20px;
+        font-family: Georgia, serif;
+        font-size: 16px;
+        font-style: italic;
+
+        line-height: 1.45;
+        position: relative;
+        color: #383838;
+        border: none;
+    }
+
+    blockquote:before {
+        display: block;
+        padding-left: 10px;
+        content: "\201C";
+        font-size: 80px;
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        color: #7a7a7a;
+    } 
+
+    blockquote cite {
+        color: #999999;
+        font-size: 14px;
+        display: block;
+        margin-top: 5px;
+    }
+
+    blockquote cite:before {
+        content: "\2014 \2009";
+    }
+    
+    @media (max-width: 768px) {
+        blockquote {
+            min-height: 330px;
+        }
+    
     }
 }
 
 
 
 
-blockquote {
-    font-family: Georgia, serif;
-    font-size: 16px;
-    font-style: italic;
 
-    margin: 0.25em 0;
-    padding: 0.35em 40px;
-    line-height: 1.45;
-    position: relative;
-    color: #383838;
-}
-
-blockquote:before {
-    display: block;
-    padding-left: 10px;
-    content: "\201C";
-    font-size: 80px;
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    color: #7a7a7a;
-}
-
-blockquote cite {
-    color: #999999;
-    font-size: 14px;
-    display: block;
-    margin-top: 5px;
-}
- 
-blockquote cite:before {
-    content: "\2014 \2009";
-}

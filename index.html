@@ -17,14 +17,16 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Imported google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700Karla:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
 
+      
+    
     <!-- Custom styles for this template -->
     
     <link href="css/style.css" type="text/css" rel="stylesheet">
-      
-    <script src="js/vue.js"></script>
   </head>
 
   <body>
@@ -33,7 +35,7 @@
     <div class="navbar-wrapper">
       <div class="container">
 
-        <nav class="nav navbar navbar-inverse navbar-fixed-top">
+        <nav class="nav navbar navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -42,11 +44,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#home">Logo <span class="glyphicon glyphicon-home"></span></a>
+              <a class="navbar-brand" href="#home"> Dash Camera</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Features
                     <span class="caret"></span></a>
@@ -56,8 +58,8 @@
                         <li><a href="#forget">Set and Forget</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact-slide">Contact</a></li>
                 <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#contact-slide">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -79,9 +81,9 @@
               
                 <p class="main-text">The goal of Dash Camera is to provide the world with a <strong>FREE</strong> alternative to expensive dash cameras. With Dash Camera you can drive easy knowing if anything goes wrong you will have a second pair of eyes to shed some light of the situation.</p>
                 
-                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s">  
+                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/6OBPKa7DN3Q">  
                     <div class="play-button center"></div>
-                    <p class="main-play"><span>PLAY VIDEO</span></p>
+                    <p class="main-play">PLAY VIDEO</p>
                 </a>
                 
             </div>
@@ -107,37 +109,37 @@
        
           <!-- Feature 1: the record functionality -->
         <div id="record" class="feature col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="images/Record.png" alt="Record Symbol" width="124" height="124">
           <h2>Auto Record</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-orange" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-orange" href="#feature" role="button">View more &raquo;</a></p>
         </div>
           
           <!-- Feature 2: The automatic detection functionality -->
         <div id="detect" class=" col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 feature">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="images/Detect.png" alt="Accident Detect Symbol" width="124" height="124">
           <h2>Accident Detection</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-orange" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-orange" href="#feature" role="button">View more &raquo;</a></p>
         </div>
           
           <!-- Feature 3: The background useability of the app -->
         <div id="forget" class="feature col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="images/Forget.png" alt="Set and Forget Symbol" width="124" height="124">
           <h2>Set and Forget</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-orange" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-orange" href="#feature" role="button">View more &raquo;</a></p>
         </div>
       </div>
         
       <!-- MAIN SELLING POINT/FEATURE SLIDE -->
-      <div class="row featurette">
+      <div class="row featurette" id="feature">
         <div class="col-md-7">
           <h2 class="featurette-heading">How it works. <span class="text-muted">It'll blow your mind.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="images/placeholder.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="images/Logo_02.png" alt="Generic placeholder image">
         </div>
       </div>
         
@@ -146,16 +148,19 @@
             <div id="mainContent" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
                 <h1 id="counterHeading">Coming Soon In..</h1>
                 <!-- The timer/counter feature -->
-                <div id="counter">
-                    <span id="months" class="timerObject">00</span>
-                    <span id="days" class="timerObject">00</span>
-                    <span id="hours" class="timerObject">00</span>
-                    <span id="minutes" class="timerObject">00</span>
-                    <span id="seconds" class="timerObject">00</span>      
-                </div>
+                <ul id="counter">
+                    <li class="counter-item"><p id="months" class="timer-object">00</p>months</li>
+                    <li class="counter-item"><p id="days" class="timer-object">00</p>days</li>
+                    <li class="counter-item"><p id="hours" class="timer-object">00</p>hours</li>
+                    <li class="counter-item"><p id="minutes" class="timer-object">00</p>minutes</li>
+                    <li class="counter-item"><p id="seconds" class="timer-object">00</p>seconds</li>      
+                </ul>
                 
-                <p>Like us on facebook! "insert facebook like icon</p>
-                <p>For every like our facebook page gets the counter will decrease by 1 hour</p>
+                <a class="btn btn-lg btn-primary" href="#" role="button">Want to see it sooner?</a>
+                
+                
+                
+                
                 
                 <hr class="featurette-divider">
                 
@@ -165,38 +170,26 @@
                     <input type="email" placeholder="add your email" class="form-control">
                 </div>
                 
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Notify Me</a></p>
+                <a class="btn btn-lg btn-primary" href="#" role="button">Notify Me</a>
             </div>
         </div>
         
         <!-- THE REVIEWS SLIDE -->
         <div id="reviews" class="row">      
-            <div class="text-center">  
+            <div class="text-center test">  
                 <h1>Reviews</h1>
-                    <blockquote>
-                        {{ review }}
-                        <cite>The reviewer's name..</cite>
-                    </blockquote>
-                
-                    <!-- this is a feature that has been worked on but removed until it can be implemented without further errors
+                <blockquote>
+                    <cite></cite>
+                </blockquote>
 
-                    <div class="text-center inline pad-tp">
-                    
-                    	<ul>
-	                        <li v-for="review in reviews">     
-	                            <a @click="selectReview($index, false)">
-	                                <img v-show="review.selected == true" src="images/{{ review.image }}" alt="Picture of reviewer">
-	                                <img v-show="review.selected == false" src="images/person_blank.png" alt="Picture of reviewer">
-	                            </a>
-	                        </li>
-	                    </ul>
-						
-                    </div>     -->         
+                <div class="text-center inline pad-tp">
+                    <ul class="reviews-container"></ul>		
+                </div>              
             </div>
         </div>
        
         <!-- THE CONTACT SLIDE -->
-        <div id="contact-slide" class="row row-minus-pad">
+        <div id="contact-slide" class="contact row row-minus-pad">
         
             <div id="form" class="col-lg-6 col-md-6 col-sm-12">
                           
@@ -257,14 +250,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="js/holder.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
       
     <!-- jQuery auto-hide nav bar plugin -->
     <script src="js/jquery.bootstrap-autohidingnavbar.js"></script>
-    <script>
+    <script type="text/javascript">
       $("nav.navbar-fixed-top").autoHidingNavbar();
     </script>
     <script src="js/main.js"></script>
@@ -272,17 +264,17 @@
     <!-- CountDown and Count Up timer -->   
     <script src="js/countdown.js"></script>
     <script>
-        countDown('04/28/2016 12:55:00 PM', ['months', 'days', 'hours', 'minutes', 'seconds'], 'counterHeading');
+        countDown('05/28/2016 12:55:00 PM', ['months', 'days', 'hours', 'minutes', 'seconds'], 'counterHeading');
     </script>
-    <script src="js/vueReviews.js"></script>
+      
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    <script src="js/reviews.js"></script>
     <!-- Video player Plugin -->
     <script src="js/video.js"></script>
       
-    
-    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
       
-    <!-- Review Changer -->
-    <script src="js/reviews.js"></script>
+    
+    
       
   </body>
 </html>

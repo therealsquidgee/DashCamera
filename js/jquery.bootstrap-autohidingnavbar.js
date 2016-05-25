@@ -25,7 +25,7 @@
         hideOffset: 'auto', // "auto" means the navbar height
         animationDuration: 200
       };
-
+    
 
   function AutoHidingNavbar(element, options) {
     this.element = $(element);
@@ -39,7 +39,7 @@
     if (!_visible) {
       return;
     }
-
+    
     autoHidingNavbar.element.addClass('navbar-hidden').animate({
       top: -autoHidingNavbar.element.height()
     }, {
@@ -51,19 +51,23 @@
 
     _visible = false;
   }
+    
+    function isVisible(){
+        return _visible;
+    }
 
   function show(autoHidingNavbar) {
     if (_visible) {
       return;
     }
-
+    
     autoHidingNavbar.element.removeClass('navbar-hidden').animate({
       top: 0
     }, {
       queue: false,
       duration: autoHidingNavbar.settings.animationDuration
     });
-    _visible = true;
+    _visible = true; 
   }
 
   function detectState(autoHidingNavbar) {
@@ -173,6 +177,10 @@
     show: function() {
       show(this);
       return this.element;
+    },
+    isVisible: function() {
+      isVisible();
+      return isVisible();
     },
     hide: function() {
       hide(this);

@@ -1,12 +1,31 @@
-.timerObject {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: white;
-  color: black; }
+ul#counter {
+  padding: 10px 10px 25px 10px;
+  list-style: none; }
+  ul#counter li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 0.9em; }
+    ul#counter li .timer-object {
+      font-family: 'Oswald', sans-serif;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: white;
+      color: black;
+      font-size: 1.2em;
+      width: 55px;
+      height: 60px; }
 
-#counter {
-  padding: 20px; }
-
+@media (max-width: 530px) {
+  ul#counter {
+    padding: 10px 50px 25px 50px; }
+    ul#counter li {
+      display: block;
+      margin: 5px; }
+      ul#counter li .timer-object {
+        padding: 15px;
+        border-radius: 15px;
+        width: auto;
+        height: 50px; } }
 /***** MODAL PROPERTIES *****/
 .modal-content {
   -webkit-box-shadow: none;
@@ -83,38 +102,34 @@
     text-decoration: none; }
   #reviews blockquote {
     max-width: 600px;
-    min-height: 250px;
+    min-height: 200px;
     margin: 0 auto;
-    padding: 20px; }
-
-blockquote {
-  font-family: Georgia, serif;
-  font-size: 16px;
-  font-style: italic;
-  margin: 0.25em 0;
-  padding: 0.35em 40px;
-  line-height: 1.45;
-  position: relative;
-  color: #383838; }
-
-blockquote:before {
-  display: block;
-  padding-left: 10px;
-  content: "\201C";
-  font-size: 80px;
-  position: absolute;
-  left: -20px;
-  top: -20px;
-  color: #7a7a7a; }
-
-blockquote cite {
-  color: #999999;
-  font-size: 14px;
-  display: block;
-  margin-top: 5px; }
-
-blockquote cite:before {
-  content: "\2014 \2009"; }
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+    border: none; }
+  #reviews blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #7a7a7a; }
+  #reviews blockquote cite {
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px; }
+  #reviews blockquote cite:before {
+    content: "\2014 \2009"; }
+  @media (max-width: 768px) {
+    #reviews blockquote {
+      min-height: 330px; } }
 
 /*  MAIN CONTENT 
 ----------------------------------------------------*/
@@ -124,6 +139,10 @@ blockquote cite:before {
   background-image: url("../images/bg2.jpg");
   background-size: cover;
   background-position: 50% 50%; }
+  .main a {
+    text-decoration: none; }
+    .main a p {
+      color: #E09F43; }
 
 #mainContent {
   padding: 10% 10px 5% 10px; }
@@ -134,15 +153,11 @@ blockquote cite:before {
   font-weight: bold; }
 .main p {
   color: #7A7A7A; }
-.main span {
-  color: #E09F43; }
 
 /* DARK THEME
 ----------------------------------------------------*/
 .main-light h1, .main-light h2, .main-light a, .main-light p {
   color: white; }
-.main-light span {
-  color: #E09F43; }
 .main-light p {
   color: #E8E8E8; }
 
@@ -166,8 +181,7 @@ blockquote cite:before {
   margin: 20px 10px 10px 10px; }
 
 .play-button:hover {
-  background-color: black;
-  color: blue; }
+  background-color: white; }
 
 .play-button:after {
   content: "";
@@ -188,8 +202,22 @@ blockquote cite:before {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 20; }
+  background-color: black; }
 
+@media (min-width: 768px) {
+  .navbar-wrapper {
+    margin-top: 20px; }
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px; }
+
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0; } }
+@media (min-width: 768px) and (max-width: 768px) {
+  .navbar li {
+    background-color: white; } }
 .navbar {
   background-color: transparent;
   border-radius: 0;
@@ -197,9 +225,56 @@ blockquote cite:before {
   .navbar a {
     color: black; }
 
-@media (max-width: 768px) {
-  .navbar li {
-    background-color: white; } }
+.navbar {
+  background: black;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  /* Standard syntax */
+  border: none; }
+  .navbar a {
+    color: white; }
+  .navbar a:hover {
+    color: black;
+    background-color: white; }
+  .navbar .active a {
+    color: white;
+    background-color: #E09F43;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 4px; }
+
+.navbar-toggle:focus {
+  outline: 0; }
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: white; }
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px; }
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none; } }
 body {
   padding-bottom: 40px;
   color: #454545;
@@ -258,31 +333,15 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-@media (min-width: 768px) {
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px; }
+/* Bump up size of carousel content */
+.carousel-caption p {
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 1.4; }
 
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px; }
+.featurette-heading {
+  font-size: 50px; }
 
-  .navbar-wrapper .navbar {
-    padding-right: 0;
-    padding-left: 0; }
-
-  /* The navbar becomes detached from the top, so we round the corners 
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  } */
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4; }
-
-  .featurette-heading {
-    font-size: 50px; } }
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 60px; } }
@@ -331,5 +390,12 @@ footer {
 .btn-orange:hover {
   background-color: black;
   color: white; }
+
+.row {
+  position: relative;
+  z-index: 21; }
+
+.main {
+  z-index: 19; }
 
 /*# sourceMappingURL=style.css.map */

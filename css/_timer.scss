@@ -1,10 +1,43 @@
-.timerObject{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: white;
-    color: black;
+ul#counter {   
+    padding: 10px 10px 25px 10px; 
+    list-style: none;
+    
+    li{
+        display: inline-block;
+        margin: 10px;
+        font-size: 0.9em;
+    
+        .timer-object{
+            font-family: 'Oswald', sans-serif;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: white;
+            color: black;
+            font-size: 1.2em;
+            width: 55px;
+            height: 60px;
+        }
+    }
 }
-#counter {
-    padding: 20px;
+
+@media (max-width: 530px) {
+    
+    ul#counter {
+        padding: 10px 50px 25px 50px; 
+        
+        li{
+            display: block;
+            margin: 5px;
+
+            .timer-object{
+                padding: 15px;
+                border-radius: 15px;    
+                width: auto; 
+                height: 50px;
+            }
+        }
+
+    }
     
 }
+
