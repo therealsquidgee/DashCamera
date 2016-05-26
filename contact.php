@@ -3,8 +3,6 @@
     
         <?php 
             require __DIR__ . '/vendor/autoload.php';
-            
-            ini_set("display_errors", "On");
         
             echo 'Welcome '. $_POST['name']. ' with email: '. $_POST['email'];
             
