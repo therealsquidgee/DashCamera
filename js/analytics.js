@@ -1,6 +1,11 @@
 $(document).ready(function(){
+   /* $.getJSON("http://jsonip.com/?callback=?", function (data) {
+        console.log(data);
+        alert(data.ip);
+    }); */
     
     // Value for what percent the user has scrolled through website
+   
     var scrollPercent = 0;
     // Website height
     var scrollHeight = $(document).height() + 48;
@@ -52,15 +57,22 @@ $(document).ready(function(){
         // Sets the furthest percent of website completion
         if(scrollPercent < (scrollTop+windowHeight)/scrollHeight){
             scrollPercent = (scrollTop+windowHeight)/scrollHeight;
-           console.log(scrollPercent);
+           //console.log(scrollPercent);
         }
     });
     
-    
+     $.ajax({
+            type: 'POST',
+            async: false,
+            url: '/infsfinal/dashcamera/analytics.php',
+            data: {scrollPercent: scrollPercent, video: video, soon: soon, autoRecord: autoRecord, autoDetect: autoDetect, autoForget: autoForget }
+        });
     // Uploads all of the stored analytics to the database
     $( window ).unload(function() {
         
-        //put code here
+        console.log("unloading...");
+       
+
     });
       
     
