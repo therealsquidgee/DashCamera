@@ -244,9 +244,7 @@ ul#counter {
     background-color: white; }
   .navbar .active a {
     color: white;
-    background-color: #E09F43;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; }
+    background-color: #E09F43; }
 
 .navbar-toggle {
   position: relative;

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+    $("nav.navbar-fixed-top").autoHidingNavbar();
     // Sets navigation bar to auto hide on scroll down
     $("nav.navbar-fixed-top").autoHidingNavbar('setDisableAutohide', true);
     addActive($('nav.navbar-fixed-top li:eq(0)'));
