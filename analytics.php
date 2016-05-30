@@ -29,16 +29,16 @@ var_dump($_POST);
             echo("Error!");  
         }
     
-    $query = "CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL,
-  `ip_address` varchar(25) NOT NULL,
-  `auto_record` tinyint(1) NOT NULL,
-  `auto_detect` tinyint(1) NOT NULL,
-  `auto_forget` tinyint(1) NOT NULL,
-  `email_address` varchar(25) NOT NULL,
-  `timer_count` tinyint(1) NOT NULL,
-  `scroll_percentage` float NOT NULL,
-  `video_count` tinyint(1) NOT NULL)";
+    $query = "CREATE TABLE user (
+  user_id int(11) NOT NULL,
+  ip_address varchar(25) NOT NULL,
+  auto_record tinyint(1) NOT NULL,
+  auto_detect tinyint(1) NOT NULL,
+  auto_forget tinyint(1) NOT NULL,
+  email_address varchar(25) NOT NULL,
+  timer_count tinyint(1) NOT NULL,
+  scroll_percentage float NOT NULL,
+  video_count tinyint(1) NOT NULL)";
     $result = sqlsrv_query($conn, $query);
     if( $result === false ) {
         die(var_dump(sqlsrv_errors()));
