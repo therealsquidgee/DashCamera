@@ -14,11 +14,19 @@
 //    $_POST['name']
 var_dump($_POST);
 
-    $conn = new mysqli("localhost","root","","dashcam");
-
-    if ($conn->connect_error) {
-        die('Could not connect: ' . $conn->connect_error);
-    }
+    try  
+        {  
+            $serverName = "tcp:fsjk8c2g5g.database.windows.net,1433";  
+            $connectionOptions = array("Database"=>"dashcamera",  
+                "Uid"=>"dashuser", "PWD"=>"Dashpass1");  
+            $conn = sqlsrv_connect($serverName, $connectionOptions);  
+            if($conn == false)  
+                die(FormatErrors(sqlsrv_errors()));  
+        }  
+    catch(Exception $e)  
+        {  
+            echo("Error!");  
+        }
     
 
    
