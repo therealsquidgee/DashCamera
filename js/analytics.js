@@ -5,13 +5,13 @@ $(document).ready(function(){
     }); */
     
     // Value for what percent the user has scrolled through website
-   
+    var emailAddress = '';
     var scrollPercent = 0;
     // Website height
     var scrollHeight = $(document).height() + 48;
 
     // Analytics targets
-    var video = false;
+    video = false;
     var soon = false;
     var autoRecord = false;
     var autoDetect = false;
@@ -38,6 +38,9 @@ $(document).ready(function(){
             case 'autoForget': 
                 setClick(autoForget);
                 break;
+            case 'email': 
+                getEmail();
+                break;
             default:
                 alert('Invalid click');
         }
@@ -46,6 +49,11 @@ $(document).ready(function(){
     function setClick(clickArea){
         clickArea = true;
         console.log(clickArea);
+    }
+
+    function getEmail(){
+        emailAddress = $("#userEmail").val();
+        console.log(emailAddress);
     }
     
     // Tracks scroll movement
@@ -61,17 +69,18 @@ $(document).ready(function(){
         }
     });
     
-     $.ajax({
-            type: 'POST',
-            async: false,
-            url: '/infsfinal/dashcamera/analytics.php',
-            data: {scrollPercent: scrollPercent, video: video, soon: soon, autoRecord: autoRecord, autoDetect: autoDetect, autoForget: autoForget }
-        });
+    
+
     // Uploads all of the stored analytics to the database
     $( window ).unload(function() {
         
         console.log("unloading...");
-       
+        $.ajax({
+            type: 'POST',
+            async: false,
+            url: 'analytics.php',
+            data: {scrollPercent: scrollPercent, video: video, soon: soon, autoRecord: autoRecord, autoDetect: autoDetect, autoForget: autoForget, emailAddress: emailAddress}
+        });
 
     });
       

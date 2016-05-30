@@ -1,10 +1,11 @@
 <?php
+    
     echo "hello world";
-    $ip_address = "192.168.1.1";
+    $ip_address = $_SERVER['REMOTE_ADDR'];
     $auto_record = $_POST['autoRecord'];
     $auto_detect = $_POST['autoDetect'];
     $auto_forget = $_POST['autoForget'];
-    $email_address = 'sdfdsfdsf@dfgdfg/com';
+    $email_address = $_POST['emailAddress'];
     $timer_count = $_POST['soon'];
     $scroll_percentage = $_POST['scrollPercent'];
     $video_count = $_POST['video'];
