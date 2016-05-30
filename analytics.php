@@ -41,7 +41,7 @@ var_dump($_POST);
   `video_count` tinyint(1) NOT NULL)";
     $result = sqlsrv_query($conn, $query);
     if( $result === false ) {
-        die(FormatErrors(sqlsrv_errors()));
+        die(var_dump(sqlsrv_errors()));
     }
     var_dump($conn);
     
