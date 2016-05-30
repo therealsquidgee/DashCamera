@@ -29,16 +29,15 @@ var_dump($_POST);
             echo("Error!");  
         }
     
-    $query = "CREATE TABLE user (
-  user_id int(11) NOT NULL,
-  ip_address varchar(25) NOT NULL,
-  auto_record tinyint(1) NOT NULL,
-  auto_detect tinyint(1) NOT NULL,
-  auto_forget tinyint(1) NOT NULL,
-  email_address varchar(25) NOT NULL,
-  timer_count tinyint(1) NOT NULL,
-  scroll_percentage float NOT NULL,
-  video_count tinyint(1) NOT NULL)";
+    $query = "CREATE TABLE userdb(userid int IDENTITY(1,1) PRIMARY KEY,
+    ip_address varchar(25) NOT NULL,
+    auto_record bit NOT NULL,
+    auto_detect bit NOT NULL,
+    auto_forget bit NOT NULL,
+    email_address bit NOT NULL,
+    timer_count bit NOT NULL,
+    scroll_percentage float NOT NULL,
+    video_count bit NOT NULL)";
     $result = sqlsrv_query($conn, $query);
     if( $result === false ) {
         die(var_dump(sqlsrv_errors()));
