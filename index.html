@@ -4,34 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/favicon.ico">
 
     <title>Dash Camera</title>
-      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      
+    <!-- Css reset -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css">
+      
     <!-- Imported google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700Karla:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
-
-      
-    
-    <!-- Custom styles for this template -->
-    
+    <!-- CSS Stylesheet -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
   </head>
 
   <body>
     
-      <!-- THE NAV BAR -->
+    <!-- THE NAV BAR -->
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -81,7 +78,7 @@
               
                 <p class="main-text">The goal of Dash Camera is to provide the world with a <strong>FREE</strong> alternative to expensive dash cameras. With Dash Camera you can drive easy knowing if anything goes wrong you will have a second pair of eyes to shed some light of the situation.</p>
                 
-                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/6OBPKa7DN3Q">  
+                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/6OBPKa7DN3Q" class="analytics" id="video">  
                     <div class="play-button center"></div>
                     <p class="main-play">PLAY VIDEO</p>
                 </a>
@@ -112,7 +109,7 @@
           <img class="img-circle" src="images/Record.png" alt="Record Symbol" width="124" height="124">
           <h2>Auto Record</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-orange" href="#feature" role="button">View more &raquo;</a></p>
+          <p><a class="btn btn-orange analytics" href="#feature" role="button" id="autoRecord">View more &raquo;</a></p>
         </div>
           
           <!-- Feature 2: The automatic detection functionality -->
@@ -120,7 +117,7 @@
           <img class="img-circle" src="images/Detect.png" alt="Accident Detect Symbol" width="124" height="124">
           <h2>Accident Detection</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-orange" href="#feature" role="button">View more &raquo;</a></p>
+          <p><a class="btn btn-orange analytics" href="#feature" role="button"  id="autoDetect">View more &raquo;</a></p>
         </div>
           
           <!-- Feature 3: The background useability of the app -->
@@ -128,7 +125,7 @@
           <img class="img-circle" src="images/Forget.png" alt="Set and Forget Symbol" width="124" height="124">
           <h2>Set and Forget</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-orange" href="#feature" role="button">View more &raquo;</a></p>
+          <p><a class="btn btn-orange analytics" href="#feature" role="button"  id="autoForget">View more &raquo;</a></p>
         </div>
       </div>
         
@@ -139,13 +136,13 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="images/Logo_02.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="images/Logo_02.png" alt="App logo">
         </div>
       </div>
         
         <!-- THE COMING SOON SLIDE -->
         <div class="row coming" id="signup">
-            <div id="mainContent" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
                 <h1 id="counterHeading">Coming Soon In..</h1>
                 <!-- The timer/counter feature -->
                 <ul id="counter">
@@ -156,21 +153,17 @@
                     <li class="counter-item"><p id="seconds" class="timer-object">00</p>seconds</li>      
                 </ul>
                 
-                <a class="btn btn-lg btn-primary" href="#" role="button">Want to see it sooner?</a>
-                
-                
-                
-                
-                
+                <a class="btn btn-lg btn-primary analytics" href="#" role="button" id="sooner">Want to see it sooner?</a>
+                     
                 <hr class="featurette-divider">
                 
                 <p>Sign up now and be guaranteed a FREE version of the app upon its release</p>
                 
                 <div class="form-group">
-                    <input type="email" placeholder="add your email" class="form-control">
+                    <input type="email" id="userEmail" placeholder="add your email" class="form-control">
                 </div>
                 
-                <a class="btn btn-lg btn-primary" href="#" role="button">Notify Me</a>
+                <a class="btn btn-lg btn-primary analytics" id="email" role="button">Notify Me</a>
             </div>
         </div>
         
@@ -191,7 +184,7 @@
         <!-- THE CONTACT SLIDE -->
         <div id="contact-slide" class="contact row row-minus-pad">
         
-            <div id="form" class="col-lg-6 col-md-6 col-sm-12">
+            <!--<div id="form" class="col-lg-6 col-md-6 col-sm-12">
                           
                 <form method="post" action="contact.php" id="contact-form">
                     <h4>Get in touch</h4> 
@@ -204,17 +197,17 @@
                     <input type="submit" class="btn btn-default" name="contact_submit" value="Send Message">
                     
                 </form> 
-            </div> 
+            </div> -->
             
             
-            <div id="details" class="col-lg-6 col-md-6 col-sm-12">
+            <div id="details" class="col-lg-12 col-md-12 col-sm-12">
                 <div id="details-info">
                 	<h4>CONTACT DETAILS</h4>
-                    <ul>   
-                        <li><span class="glyphicon glyphicon-user"></span>David Chaseling</li>
-                        <li><span class="glyphicon glyphicon-map-marker"></span>66 Durham St, St Lucia, Brisbane</li>
-                        <li><span class="glyphicon glyphicon-earphone"></span>0403836118</li>
-                        <li><span class="glyphicon glyphicon-envelope"></span>davidchaseling@live.com.au</li>
+                    <ul>  
+                        <li><strong>Name: </strong>David Chaseling</li>
+                        <li><strong>Address: </strong>66 Durham St, St Lucia, Brisbane</li>
+                        <li><strong>Number: </strong>0403836118</li>
+                        <li><strong>Email: </strong>davidchaseling@live.com.au</li>
                         
                     </ul>
                 </div>
@@ -241,40 +234,40 @@
         <p>Copyright &copy; 2016 Dash Cam App, Inc.</p>
       </footer> 
 
-    </div><!-- /.container -->
+    </div>
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+      
+    <!-- Hammer -->
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
       
     <!-- jQuery auto-hide nav bar plugin -->
-    <script src="js/jquery.bootstrap-autohidingnavbar.js"></script>
-    <script type="text/javascript">
-      $("nav.navbar-fixed-top").autoHidingNavbar();
-    </script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery.bootstrap-autohidingnavbar.js" type="text/javascript"></script>
       
-    <!-- CountDown and Count Up timer -->   
-    <script src="js/countdown.js"></script>
-    <script>
-        countDown('05/28/2016 12:55:00 PM', ['months', 'days', 'hours', 'minutes', 'seconds'], 'counterHeading');
-    </script>
-      
-    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-    <script src="js/reviews.js"></script>
     <!-- Video player Plugin -->
-    <script src="js/video.js"></script>
+    <script src="js/video.js" type="text/javascript"></script>
+
+    <!-- Main javascript file -->
+    <script src="js/main.js" type="text/javascript"></script>
       
+    <!-- CountDown timer -->   
+    <script src="js/countdown.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        countDown('07/28/2016 12:55:00 PM', ['months', 'days', 'hours', 'minutes', 'seconds'], 'counterHeading');
+    </script>
       
     
-    
+      
+    <!-- Swipe reviews -->
+    <script src="js/reviews.js" type="text/javascript"></script>
+   
+    <!-- Custom Analytics --> 
+    <script src="js/analytics.js" type="text/javascript"></script>
       
   </body>
 </html>
