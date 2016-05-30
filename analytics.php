@@ -20,8 +20,9 @@ var_dump($_POST);
             $connectionOptions = array("Database"=>"dashcamera",  
                 "Uid"=>"dashuser", "PWD"=>"Dashpass1");  
             $conn = sqlsrv_connect($serverName, $connectionOptions);  
-            if($conn == false)  
+            if($conn == false) {
                 die(FormatErrors(sqlsrv_errors()));  
+            }
         }  
     catch(Exception $e)  
         {  
@@ -38,9 +39,9 @@ var_dump($_POST);
   `timer_count` tinyint(1) NOT NULL,
   `scroll_percentage` float NOT NULL,
   `video_count` tinyint(1) NOT NULL)";
-    $result = $conn->prepare($query);
-    if(!$result){
-        echo "Didn't work"; // useful for debugging
+    $result = sqlsrv_query($conn, $query);
+    if( $result === false ) {
+        die(FormatErrors(sqlsrv_errors()));
     }
     var_dump($conn);
     
