@@ -42,12 +42,12 @@ var_dump($_POST);
     if(!$result){
         echo "Didn't work"; // useful for debugging
     }
-
-
-   
+    var_dump($conn);
+    
+    echo $query;
 
     $stmt = $conn->prepare("INSERT INTO user (ip_address,auto_record,auto_detect,auto_forget,email_address,timer_count,scroll_percentage,video_count)values (?,?,?,?,?,?,?,?)");
-    
+    echo $stmt;
 
     $stmt->bind_param("siiisidi", $ip_address,$auto_record,$auto_detect,$auto_forget,$email_address,$timer_count,$scroll_percentage,$video_count);
     
