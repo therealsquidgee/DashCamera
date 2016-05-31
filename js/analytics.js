@@ -11,7 +11,7 @@ $(document).ready(function(){
     var scrollHeight = $(document).height() + 48;
 
     // Analytics targets
-    video = false;
+    var video = false;
     var soon = false;
     var autoRecord = false;
     var autoDetect = false;
@@ -72,7 +72,7 @@ $(document).ready(function(){
     
 
     // Uploads all of the stored analytics to the database
-    $( window ).unload(function() {
+    window.onbeforeunload = function() {
         
         console.log("unloading...");
         $.ajax({
@@ -81,8 +81,7 @@ $(document).ready(function(){
             url: 'analytics.php',
             data: {scrollPercent: scrollPercent, video: video, soon: soon, autoRecord: autoRecord, autoDetect: autoDetect, autoForget: autoForget, emailAddress: emailAddress}
         });
-
-    });
+    }
       
     
 });

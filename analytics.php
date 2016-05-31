@@ -11,13 +11,16 @@
     $timer_count = $_POST['soon'];
     $scroll_percentage = $_POST['scrollPercent'];
     $video_count = $_POST['video'];
+    $accessed = gmdate("Y-m-d H:i:s");
+
 
 
 //    $_POST['name']
 var_dump($_POST);
     
-    $query = "INSERT INTO userdb (ip_address,auto_record,auto_detect,auto_forget,email_address,timer_count,scroll_percentage,video_count)values (?,?,?,?,?,?,?,?)";
-    $result = sqlsrv_query($conn, $query);
+    $query = "INSERT INTO userdb (ip_address,auto_record,auto_detect,auto_forget,email_address,timer_count,scroll_percentage,video_count, accessed)values (?,?,?,?,?,?,?,?,?)";
+    $params = array($ip_address, $auto_record, $auto_detect, $auto_forget, $email_address, $timer_count, $scroll_percentage, $video_count, $accessed);
+    $result = sqlsrv_query($conn, $query, $params);
     if( $result === false ) {
         die(var_dump(sqlsrv_errors()));
     }
