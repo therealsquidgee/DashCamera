@@ -1,4 +1,6 @@
 <?php
+
+    require "dbConnect.php";
     
     echo "hello world";
     $ip_address = $_SERVER['REMOTE_ADDR'];
@@ -13,21 +15,6 @@
 
 //    $_POST['name']
 var_dump($_POST);
-
-    try  
-        {  
-            $serverName = "tcp:fsjk8c2g5g.database.windows.net,1433";  
-            $connectionOptions = array("Database"=>"dashcamera",  
-                "Uid"=>"dashuser", "PWD"=>"Dashpass1");  
-            $conn = sqlsrv_connect($serverName, $connectionOptions);  
-            if($conn == false) {
-                die(FormatErrors(sqlsrv_errors()));  
-            }
-        }  
-    catch(Exception $e)  
-        {  
-            echo("Error!");  
-        }
     
     $query = "INSERT INTO userdb (ip_address,auto_record,auto_detect,auto_forget,email_address,timer_count,scroll_percentage,video_count)values (?,?,?,?,?,?,?,?)";
     $result = sqlsrv_query($conn, $query);

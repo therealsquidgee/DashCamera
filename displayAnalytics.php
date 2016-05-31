@@ -1,35 +1,14 @@
 <?php
 	
 
-	//$mysqli = new mysqli("localhost","root","","dashcam");
-
-    //if ($mysqli->connect_error) {
-      //  die('Could not connect: ' . $conn->connect_error);
-    //}
-
-	try  
-        {  
-            $serverName = "tcp:fsjk8c2g5g.database.windows.net,1433";  
-            $connectionOptions = array("Database"=>"dashcamera",  
-                "Uid"=>"dashuser", "PWD"=>"Dashpass1");  
-            $conn = sqlsrv_connect($serverName, $connectionOptions);  
-            if($conn == false)  
-                die(FormatErrors(sqlsrv_errors()));  
-        }  
-        catch(Exception $e)  
-        {  
-            echo("Error!");  
-        }
-
+	require 'dbConnect.php';
+	
+	$queryString = "select distinct ip_address from user";
+	$query = sqlsrv_query($conn, $queryString);
    
-	if ($result) {
-		$total = $result->num_rows;
-		printf("%d Total Vistors.", $total);
-		printf("<br />");
-		$result->close();
-
-
-	}
+   $rowCount = sqlsrv_num_rows($query);
+   
+	echo $rowCount;
 
 
 
