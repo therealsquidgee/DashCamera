@@ -8,7 +8,7 @@
    
    	$rowCount = sqlsrv_num_rows($rowNumQuery);
    
-	printf("Number of distinct IP Addresses: %d <br/>", $rowCount);
+	printf("Number of sessions: %d <br/>", $rowCount);
 
 	
 	$queryString = "SELECT AVG(scroll_percentage) FROM userdb";
@@ -45,7 +45,7 @@
 		$paramCount = sqlsrv_num_rows($paramQuery);
 	
 		$paramPercent = $paramCount / $rowCount *100;
-		printf("%.2f%% percent of users click on the " . $paramName . " Feature <br/>", $paramPercent);
+		printf("%.2f%% of users click on the " . $paramName . " Feature <br/>", $paramPercent);
 
 	}
 ?>

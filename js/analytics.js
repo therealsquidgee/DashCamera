@@ -1,21 +1,21 @@
+// Value for what percent the user has scrolled through website
+var emailAddress = '';
+var scrollPercent = 0;
+
+// Analytics targets
+var video = false;
+var soon = false;
+var autoRecord = false;
+var autoDetect = false;
+var autoForget = false;
+
 $(document).ready(function(){
    /* $.getJSON("http://jsonip.com/?callback=?", function (data) {
         console.log(data);
         alert(data.ip);
     }); */
-    
-    // Value for what percent the user has scrolled through website
-    var emailAddress = '';
-    var scrollPercent = 0;
     // Website height
     var scrollHeight = $(document).height() + 48;
-
-    // Analytics targets
-    var video = false;
-    var soon = false;
-    var autoRecord = false;
-    var autoDetect = false;
-    var autoForget = false;
     
     // tracks click events on key analytics targets
     $('.analytics').click(function(){
@@ -24,19 +24,19 @@ $(document).ready(function(){
         console.log(id);     
         switch (id) { 
             case 'video': 
-                setClick(video);
+                video = true;
                 break;
             case 'sooner': 
-                setClick(soon);
+                soon = true;
                 break;
             case 'autoRecord': 
-                setClick(autoRecord);
-                break;		
+                autoRecord = true;
+                break;
             case 'autoDetect': 
-                setClick(autoDetect);
+                autoDetect = true;
                 break;
             case 'autoForget': 
-                setClick(autoForget);
+                autoForget = true;
                 break;
             case 'email': 
                 getEmail();
@@ -45,14 +45,10 @@ $(document).ready(function(){
                 alert('Invalid click');
         }
     });
-    
-    function setClick(clickArea){
-        clickArea = true;
-        console.log(clickArea);
-    }
 
     function getEmail(){
         emailAddress = $("#userEmail").val();
+        $("#userEmail").val("");
         console.log(emailAddress);
     }
     
@@ -74,12 +70,23 @@ $(document).ready(function(){
     // Uploads all of the stored analytics to the database
     window.onbeforeunload = function() {
         
+        console.log(autoRecord);
+        
         console.log("unloading...");
         $.ajax({
             type: 'POST',
             async: false,
             url: 'analytics.php',
-            data: {scrollPercent: scrollPercent, video: video, soon: soon, autoRecord: autoRecord, autoDetect: autoDetect, autoForget: autoForget, emailAddress: emailAddress}
+            data: 
+                {
+                    scrollPercent: scrollPercent, 
+                    video: video, 
+                    soon: soon, 
+                    autoRecord: autoRecord, 
+                    autoDetect: autoDetect, 
+                    autoForget: autoForget, 
+                    emailAddress: emailAddress
+                }
         });
     }
       
